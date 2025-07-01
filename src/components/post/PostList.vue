@@ -10,7 +10,7 @@ const router = useRouter()
 const paginationSize = 10
 
 const currentPage = ref(1)
-const posts = ref<PostT[] | null>(null)
+const posts = ref<PostT[]>([])
 
 const postSliced = computed<PostT[]>(()=> posts.value?.slice((currentPage.value - 1) * paginationSize, currentPage.value * paginationSize))
 
@@ -43,6 +43,7 @@ onMounted(() => {
   </div>
 
   <list-pagination
+      v-if="posts"
       :list="posts"
       :current-page="currentPage"
       :page-size="paginationSize"

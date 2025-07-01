@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as s,e as c,r}from"./index-CGIlr74h.js";const n={},_={class:"posts-view"};function a(d,i){const e=r("router-view");return s(),t("div",_,[c(e)])}const f=o(n,[["render",a],["__scopeId","data-v-a9ede43e"]]);export{f as default};

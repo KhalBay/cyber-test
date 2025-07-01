@@ -1,21 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import type { PostT } from "../models/interfaces";
 
-const props = defineProps({
-  list: {
-    type: Array,
-    required: true
-  },
-  currentPage: {
-    type: Number,
-    required: true
-  },
-  pageSize: {
-    type: Number,
-    required: false,
-    default: 10
-  }
-})
+const props = defineProps<{
+  list: PostT[]
+  currentPage: number
+  pageSize?: number
+}>()
 
 const emits = defineEmits(['updatePage'])
 
